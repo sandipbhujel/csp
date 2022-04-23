@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+{% block content %}
+<section style="padding-left: 10px">
+<div class="row no-gutters">
+	<div class="col-lg-6 col-md-6 wizard-content-right">
+		<div>
+			<form action="{% url 'result' %}" method="POST" role="form">
+				{% csrf_token %}
+				<fieldset class="wizard-fieldset show">
+					<h5>Match Information</h5>
+					<div class="form-group">
+					 	<label for="CurrentScore:">Current Score:</label>
+						<input class="form-control" type="text" name="n1">
+					</div>
+					<div class="form-group">
+						<label for="Balls_left:">Balls Left:</label>
+						<input class="form-control" type="text" name="n2">
+					</div>
+					<div class="form-group">
+						<label for="Wickets_left:">Wickets Left:</label>
+						<input class="form-control" type="text" name="n3">
+					</div>
+					<div class="form-group">
+						<label for="Currentrunrate:">Current Run Rate:</label>
+						<input class="form-control" type="text" name="n4">
+					</div>
+					<div class="form-group">
+						<label for="Lastfiveoversrun:">Last Five Overs Run:</label>
+						<input class="form-control" type="text" name="n5">
+					</div>
+					<div class="form-group">
+						<label>Please select Algorithm:</label><br>
+						<input type="radio" name="algo" value="ml">Multiple Linear<input type="radio" name="algo" value="rf">Random Forest
+					</div>
+					<div class="form-group clearfix">
+						<button class="btn btn-primary" type="Submit">Submit</button>
+					</div>
+				</fieldset>	
+			</form>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6">
+		<div class="wizard-content-left d-flex justify-content-center align-items-center">
+			<h1>You can find out the predicted score using Multiple linear as well as Random Forest</h1>
+		</div>
+	</div>
+</div>
+ Total Runs:{{data}}
+</section>
+{% endblock content%}

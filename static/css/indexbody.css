@@ -1,0 +1,10 @@
+.welcome {
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.45);
+  background-image: url("https://wallpaperaccess.com/full/1088580.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #000;
+  height: 100vh;
+  padding: 30px;
+}

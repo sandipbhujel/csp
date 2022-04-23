@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}" type="text/css" media="screen">
+    <link href="{%static 'styles/global.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/indexbody.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/form.css' %}">
+    <script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <title>CricPredict</title>
+</head>
+<body style="background-color: rgb(218, 211, 203);">
+    <section id="header" class="cd-secondary-nav">
+ <div class="container">
+  <div class="row">
+   <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropdown-thumbnail-preview">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}"><span class="well_2">CRIC</span>PREDICT <span class="well_1"><i class="fas fa-cricket"></i></i></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'home' %}" class="hvr-underline-from-center">HOME</a></li>
+        <li><a href="#" class="hvr-underline-from-center">LIVE MATCHES</a></li>
+        <li><a href="#" class="hvr-underline-from-center"><MAIN>MATCH RESULTS</MAIN></a></li>
+      </ul>
+    </div>
+</nav>
+  </div>
+ </div>
+</section>
+
+    {% block content %}
+
+    {% endblock %}
+    <section id="footer" class="clearfix">    
+     <div class="row">
+       <div class="col-sm-12 space_all">
+     <div class="col-sm-4">
+       <div class="footer_1">
+        <h4>CricPredict</h4>
+       </div>
+       </div>
+       <div class="col-sm-4">
+        <div class="footer_2">
+         <h4>FOLLOW US</h4>
+         <ul>
+              <li class="well_3"><i class="fa fa-facebook"></i></li>
+              <li class="well_4"><i class="fa fa-twitter"></i></li>
+              <li class="well_5"><i class="fa fa-linkedin"></i></li>
+              <li class="well_6"><i class="fa fa-instagram"></i></li>
+         </ul>
+        </div>
+       </div>
+       <div class="col-sm-4">
+        <div class="footer_4">
+        <h4>Fantasy</h4>
+         <ul>
+            <li>Fantasy Home</li>
+            <li>My Team</li>
+        </ul>
+       </div>
+       </div>
+     </div>
+     </div>
+   </section>
+<section id="footer_main" class="clearfix">
+    <div class="col-sm-12 space_all">
+        <div class="footer_main_1">
+            <p>© 2013 Your Website Name. All Rights Reserved. Design by<a href="http://www.TemplateOnWeb.com"> Template On Web</a> </p>
+        </div>
+    </div>
+</section>
+    <script>
+        $(document).ready(function(){
+            /*****Fixed Menu******/
+            var secondaryNav = $('.cd-secondary-nav'),
+               secondaryNavTopPosition = secondaryNav.offset().top;
+                $(window).on('scroll', function(){
+                    if($(window).scrollTop() > secondaryNavTopPosition ) {
+                        secondaryNav.addClass('is-fixed');  
+                    } else {
+                        secondaryNav.removeClass('is-fixed');
+                    }
+                }); 
+                
+        });
+        </script>
+</body>
+</html>

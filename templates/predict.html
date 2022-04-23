@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prediction page</title>
-</head>
-<body>
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
     <h1>Please enter the information</h1>
     <form action="{% url 'result' %}"  >
         <!-- <table>
@@ -47,10 +41,10 @@
         <input type="text" name="n5">
         <br />
         <label>Please select Algorithm:</label><br>
-        <input type="radio" name="algo" value="ml">Multiple Linear<input type="radio" name="algo" value="rf">Random Forest<br>
+        <input type="radio" name="algo" value="ml">Multiple Linear><input type="radio" name="algo" value="rf">Random Forest<br>
         <input type="submit">
     </form>
     Total Runs:{{data}}
-    
-</body>
-</html>
+</div>
+
+{% endblock content %}
