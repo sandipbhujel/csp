@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction page</title>
+</head>
+<body>
+    <h1>Please enter the information</h1>
+    <form action="{% url 'result' %}"  >
+        <!-- <table>
+            <tr>
+                <td align="right">Current Score:</td>
+                <td align="left"><input type="text" name="n1"></td>
+            </tr>
+            <tr>
+                <td align="right">Balls_left:</td>
+                <td align="left"><input type="text" name="n2"></td>
+            </tr>
+            <tr>
+                <td align="right">Wickets_left:</td>
+                <td align="left"><input type="text" name="n3"></td>
+            </tr>
+            <tr>
+                <td align="right">Current Run Rate:</td>
+                <td align="left"><input type="text" name="n4"></td>
+            </tr>
+            <tr>
+                <td align="right">Last Five overs Run:</td>
+                <td align="left"><input type="text" name="n5"></td>
+            </tr>
+        </table> -->
+        <label for="CurrentScore:">Current Score:</label>
+        <input type="text" name="n1">
+        <br />
+        <label for="Balls_left:">Balls Left:</label>
+        <input type="text" name="n2">
+        <br />
+        <label for="Wickets_left:">Wickets Left:</label>
+        <input type="text" name="n3">
+        <br/>
+        <label for="Currentrunrate:">Current Run Rate:</label>
+        <input type="text" name="n4">
+        <br />
+        <label for="Lastfiveoversrun:">Last Five Overs Run:</label>
+        <input type="text" name="n5">
+        <br />
+        <label>Please select Algorithm:</label><br>
+        <input type="radio" name="algo" value="ml">Multiple Linear<input type="radio" name="algo" value="rf">Random Forest<br>
+        <input type="submit">
+    </form>
+    Total Runs:{{data}}
+    
+</body>
+</html>
