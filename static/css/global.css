@@ -67,15 +67,6 @@ br{
 section{ 
 
 }
-.welcome {
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.45);
-  background-image: url(https://www.vecteezy.com/free-vector/cricket);
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
-  padding: 30px;
-}
 .img_responsive{ 
  width:100%
  }
